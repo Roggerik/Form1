@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /*  Color Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --white: rgb(255, 255, 255);
+/* Accent */
+  --Blue: hsl(248, 32%, 49%);
+/* Neutral */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--Red);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  background: url('images/bg-intro-desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section__text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title{
+  width: 80%;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.8rem;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+.section__paragraph{
+  width: 80%;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-left: 100px;
+}
+
+.section__form{
+  width: 100%;
+  height: 100%;
+}
+.section__form header{
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.section__form header p{
+  display: inline-block;
+  padding:12px 80px;
+  background:var(--Blue);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color:var(--white);
+  font-weight: 400;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.1);
+}
+
+.section__form header p span{
+  font-weight: 600;
+}
+
+.section__form form{
+  background:var(--white);
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 0;
+  width: 420px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.1);
+}
+.section__form form .inputs{
+  padding-top: 20px ;
+}
+.group__input{
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  margin:20px auto
+}
+
+.group__input input{
+  width: 90%;
+  font-size: 0.8rem;
+  padding: 12px 0 10px 20px;
+  border: 1.5px solid var(--Grayish-Blue);
+  border-radius: 4px;
+  outline: none;
+  font-weight: 500;
+  
+}
+
+.group__input input:focus{
+  border: 1.5px solid var(--Blue);
+}
+
+.group__input .icon__error{
+  position: absolute;
+  right:30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.group__input .text__error{
+  position: absolute;
+  font-size: 0.5rem;
+  right: 25px;
+  bottom:-15px;
+  color: var(--Red);
+  display: none;
+}
+
+.activado .text__error{
+  display: block;
+}
+
+.section__form form button{
+  width: 90%;
+  margin: 20px auto;
+  padding: 12px;
+  border: none;
+  background: var(--Green);
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 0 rgb(50, 189, 129);
+  cursor: pointer;
+}
+
+.section__form form span{
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+}
+
+.section__form form span a{
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: 500;
+}
+
+.activado .icon__error{
+  display: block;
+}
+
+footer{
+  width: 100%;
+  margin: 30px auto 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.attribution {
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgba(255,255,255,0.3);
+  font-size: 11px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: var(--Blue);
+}
+.attribution a { color: black; }
+
+
+
+@media screen and (min-width:375px) and (max-width:844px) {
+  .container{
+    width: 335px;
+    background: url('images/bg-intro-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    overflow:scroll ;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+
+  }
+
+  .section__text{
+    width: 100%;
+    margin: 70px auto 0;
+    text-align: center;
+  }
+  
+  .section__title{
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 0 auto 30px;
+  }
+
+  .section__paragraph{
+    width: 95%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 auto 50px;
+  }
+
+  .section__form header{
+    margin-top: 0px;
+  }
+
+  .section__form header p{
+    padding:18px 80px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .section__form form{
+    margin: 20px auto 10px;
+    width: 335px;
+    height: 440px;
+  }
+
+  .section__form form .inputs{
+    padding-top: 0px ;
+  }
+
+  .group__input{
+    margin:15px auto
+  }
+
+  .group__input input{
+    width: 90%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 18px 0 18px 20px;
+  }
+  
+  .group__input .text__error{
+    font-size: 0.6rem;
+  }
+
+  .section__form form button{
+    padding: 18px;
+  }
+
+  .section__form form span{
+    font-size: 0.7rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .section__form form span a{
+    font-weight: 600;
+  }
+  
+  
+footer{
+  width: 100%;
+  margin: 10px auto 20px;
+  text-align: center;
+
+}
+
+}
